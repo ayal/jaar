@@ -8,11 +8,11 @@
  */
 
 // Load the ServiceWorker, the Cache polyfill, the manifest.json file and the .htaccess file
-import 'file?name=[name].[ext]!../serviceworker.js';
+//import 'file?name=[name].[ext]!../serviceworker.js';
 import 'file?name=[name].[ext]!../manifest.json';
 import 'file?name=[name].[ext]!../.htaccess';
 
-// Check for ServiceWorker support before trying to install it
+/*// Check for ServiceWorker support before trying to install it
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/serviceworker.js').then(() => {
     // Registration was successful
@@ -21,14 +21,14 @@ if ('serviceWorker' in navigator) {
   });
 } else {
   // No ServiceWorker Support
-}
+}*/
 
 // Import all the third party stuff
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware,compose } from 'redux';
 import thunk from 'redux-thunk';
 import FontFaceObserver from 'fontfaceobserver';
 import createHistory from 'history/lib/createBrowserHistory';
@@ -45,6 +45,7 @@ openSansObserver.check().then(() => {
 
 // Import the pages
 import HomePage from './components/pages/HomePage.react';
+import Jaar from './components/pages/Jaar.react';
 import ReadmePage from './components/pages/ReadmePage.react';
 import NotFoundPage from './components/pages/NotFound.react';
 import App from './components/App.react';
@@ -54,7 +55,18 @@ import '../css/main.css';
 
 // Create the store with the redux-thunk middleware, which allows us
 // to do asynchronous things in the actions
+import getAlbumsMiddleware from './middlewares/getAlbumsMiddleware';
+
 import rootReducer from './reducers/rootReducer';
+
+/*
+var f_createStore = compose(
+    thunk,
+    applyMiddleware(getAlbumsMiddleware),
+    createStore
+    );
+*/
+
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(rootReducer);
 
@@ -72,8 +84,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={createHistory()}>
       <Route component={App}>
-        <Route path="/" component={HomePage} />
-        <Route path="/readme" component={ReadmePage} />
+        <Route path="/" component={Jaar} />
+	<Route path="/jaar" component={Jaar} />
         <Route path="*" component={NotFoundPage} />
       </Route>
     </Router>

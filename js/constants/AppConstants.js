@@ -8,3 +8,7 @@
  */
 export const CHANGE_PROJECT_NAME = 'CHANGE_PROJECT_NAME';
 export const CHANGE_OWNER_NAME = 'CHANGE_OWNER_NAME';
+
+export const ALBUMS_LOAD = 'ALBUMS_LOAD';
+export const ALBUMS_LOAD_OK = 'ALBUMS_LOAD_OK';
+

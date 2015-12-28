@@ -1,5 +1,5 @@
 {
-  "name": "reactjs-boilerplate",
+  "name": "jaar",
   "version": "2.4.0",
   "description": "Quick setup for new React.js applications featuring Redux, hot–reloading, PostCSS, react-router and Mocha.",
   "dependencies": {
@@ -31,6 +31,7 @@
     "eslint-plugin-react": "^3.3.2",
     "expect": "^1.10.0",
     "extract-text-webpack-plugin": "0.9.1",
+    "fetch-jsonp": "^1.0.0",
     "file-loader": "^0.8.4",
     "html-webpack-plugin": "^1.6.1",
     "ip": "1.1.0",
@@ -40,6 +41,7 @@
     "postcss-focus": "^1.0.0",
     "postcss-import": "^7.0.0",
     "postcss-loader": "^0.8.0",
+    "postcss-nested": "^1.0.0",
     "postcss-reporter": "^1.2.1",
     "postcss-simple-vars": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
@@ -60,6 +62,6 @@
     "build": "npm run test && cross-env NODE_ENV=production webpack --config webpack.prod.config.js --progress --colors -p",
     "serve": "cross-env NODE_ENV=production node server.prod.js"
   },
-  "author": "Max Stoiber",
-  "license": "MIT"
+  "author": "Ayal Gelles",
+  "license": "dont copy"
 }
