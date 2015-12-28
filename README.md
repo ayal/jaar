@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React.js Boilerplate [![Dependency Status][dep-status-img]][dep-status-link] [![devDependency Status][dev-dep-status-img]][dev-dep-status-link] [![Build Status][ci-img]][ci]
 
 Quick setup for new performance orientated, offline–first React.js applications featuring Redux, hot–reloading, PostCSS, react-router, ServiceWorker, AppCache, FontFaceObserver and Mocha.
@@ -160,3 +161,7 @@ See [`CONTRIBUTING.md`](CONTRIBUTING.md) for infos on how you can help!
 ## License
 
 This project is licensed under the MIT license, Copyright (c) 2015 Maximilian Stoiber. For more information see `LICENSE.md`.
+=======
+# jaar
+the door is a jaar
+>>>>>>> 02c4d78d10bf746c06918cf844609d69061ab72b
